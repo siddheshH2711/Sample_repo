@@ -12,5 +12,7 @@ pipelines:
           - node
         script: # Modify the commands below to build your repository.
           - npm install
+          - npm test
           - PORT=9000 pm2 start index.js --name="sampleNodejsProject" --watch=1 --log-date-format="YYYY-MM-DD HH:mm Z" --watch --merge-logs
           - pm2 reload 0
+
